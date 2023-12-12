@@ -1,23 +1,111 @@
+/*
+#fefae0
+#69646f
+#dc9d8f
+#dc9698
+*/
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  margin: 0;
-  padding: 0;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
+  text-align: center;
+  background-color: #fefae0;
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0;
-}
 
 p {
-  margin: 0;
+  font-size: 16px;
+}
+
+h2 {
+  font-size: 2em;
+  text-decoration: underline;
+}
+
+.page-section {
+  border-top: #dc9698 solid 5px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+/*Navigation*/
+
+header {
+  display: flex;
+  flex-direction: row;
+  height: 100px;
+  background-color: #dc9698;
+}
+
+header h1 {
+  font-size: 30px;
+  width: 50%;
+  color: #69646f;
+}
+
+nav {
+  width: 50%;
+}
+
+nav li {
+  display: inline;
+  font-size: 20px;
+  padding: 25px;
+}
+
+a {
+  color: #fefae0;
+  text-decoration: none;
+}
+
+/*Banner*/
+
+.hero-banner {
+  background-image: url("../images/hero_banner.png");
+  background-size: cover;
+  size: 300px 400px;
+}
+
+
+/*About Me*/
+
+#contact li {
+  display: inline;
+  font-size: 20px;
+  padding: 25px;
+}
+
+/*Projects*/
+
+.container-project {
+  margin: auto 100px;
+  display: grid;
+  grid-template-rows: 200px 200px;
+  grid-template-columns: 1fr 1fr;
+  grid-gap: 25px;
+  grid-template-areas: 
+  "main-project main-project"
+  "second-project third-project";
+}
+
+#main-project {
+  border: #69646f solid 2px;
+}
+
+#second-project {
+  border: #69646f solid 2px;
+}
+
+#third-project {
+  border: #69646f solid 2px;
+}
+
+/*Contact Me*/
+
+#contact ul {
+  
 }
