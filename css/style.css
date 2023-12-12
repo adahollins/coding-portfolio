@@ -1,9 +1,8 @@
-/*
-#fefae0
-#69646f
-#dc9d8f
-#dc9698
-*/
+:root {
+  --cream: #fefae0;
+  --pink: #dc9d8f;
+  --purple: #69646f;
+}
 
 * {
   box-sizing: border-box;
@@ -13,9 +12,8 @@ body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   line-height: 1.5;
   text-align: center;
-  background-color: #fefae0;
+  background-color: var(--cream);
 }
-
 
 p {
   font-size: 16px;
@@ -23,13 +21,16 @@ p {
 
 h2 {
   font-size: 2em;
-  text-decoration: underline;
+  text-decoration: underline var(--pink);
 }
 
 .page-section {
-  border-top: #dc9698 solid 5px;
   padding-top: 50px;
   padding-bottom: 50px;
+}
+
+main {
+  margin: auto 100px;
 }
 
 /*Navigation*/
@@ -38,17 +39,23 @@ header {
   display: flex;
   flex-direction: row;
   height: 100px;
-  background-color: #dc9698;
+  background-color: var(--pink);
 }
 
 header h1 {
-  font-size: 30px;
+  font-size: 35px;
   width: 50%;
-  color: #69646f;
+  color: var(--cream);
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav {
   width: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 nav li {
@@ -57,9 +64,13 @@ nav li {
   padding: 25px;
 }
 
-a {
-  color: #fefae0;
+header a {
+  color: var(--cream);
   text-decoration: none;
+}
+
+header a:hover {
+  color: var(--purple);
 }
 
 /*Banner*/
@@ -67,45 +78,86 @@ a {
 .hero-banner {
   background-image: url("../images/hero_banner.png");
   background-size: cover;
-  size: 300px 400px;
+  background-position: center;
+  height: 250px;
 }
 
 
 /*About Me*/
 
-#contact li {
-  display: inline;
-  font-size: 20px;
-  padding: 25px;
+#container-about {
+  display: flex;
+}
+
+#about img {
+  height: 250px;
+  justify-content: flex-start;
+}
+
+#about p {
+  justify-content: center;
+  align-items: center;
+  padding-left: 50px;
 }
 
 /*Projects*/
 
 .container-project {
-  margin: auto 100px;
   display: grid;
   grid-template-rows: 200px 200px;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-gap: 25px;
   grid-template-areas: 
-  "main-project main-project"
-  "second-project third-project";
+  "main main"
+  "second third";
+}
+
+.project-section {
+  border: var(--purple) solid 3px;
+  background-color: var(--purple);
 }
 
 #main-project {
-  border: #69646f solid 2px;
+  grid-area: "main";
+  background-image: url("../images/02-portfolio-1.jpg");
+  background-size: cover;
 }
 
 #second-project {
-  border: #69646f solid 2px;
+  grid-area: "second";
+  background-image: url("../images/02-portfolio-2.jpg");
+  background-size: cover;
 }
 
 #third-project {
-  border: #69646f solid 2px;
+  grid-area: "third";
+  background-image: url("../images/02-portfolio-3.jpg");
+  background-size: cover;
+}
+
+#projects h3,
+#projects h4 {
+  color: var(--cream);
+  font-size: 20px;
 }
 
 /*Contact Me*/
 
-#contact ul {
-  
+#contact {
+  background-color: var(--pink);
+}
+
+#contact li {
+  display: inline;
+  font-size: 15px;
+  padding: 20px;
+}
+
+#contact a {
+  text-decoration: none;
+  color: var(--cream);
+}
+
+#contact a:hover {
+  color: var(--purple);
 }
